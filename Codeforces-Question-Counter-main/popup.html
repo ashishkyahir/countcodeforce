@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codeforces Question Counter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Codeforces Question Counter</h1>
+    
+    <div id="setup-section" class="section">
+      <label for="handle-input">Enter your Codeforces handle:</label>
+      <input type="text" id="handle-input" placeholder="e.g., tourist">
+      <button id="save-handle">Save Handle</button>
+    </div>
+
+    <div id="stats-section" class="section hidden">
+      <div class="user-info">
+        <h2 id="user-handle"></h2>
+        <button id="change-handle" class="small-btn">Change Handle</button>
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-number" id="question-count">0</div>
+          <div class="stat-label">Questions Solved</div>
+        </div>
+        <div id="tracking-status" class="status-info">Not tracking</div>
+      </div>
+      
+      <div class="button-group">
+        <button id="start-btn" class="action-btn start-btn">Start Tracking</button>
+        <button id="reset-btn" class="action-btn reset-btn">Reset Count</button>
+        <button id="refresh-btn" class="action-btn">🔄 Refresh Now</button>
+      </div>
+      
+      <div class="problems-section">
+        <button id="toggle-problems" class="toggle-btn">▼ Show Solved Problems</button>
+        <div id="problems-list" class="problems-list hidden"></div>
+      </div>
+      
+      <div id="error-msg" class="error hidden"></div>
+      <div id="loading" class="loading hidden">Loading...</div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
